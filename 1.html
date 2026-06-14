@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<title>Dream Journey</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#fff;
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+}
+
+.hero{
+
+position:relative;
+
+height:100vh;
+width:100%;
+
+border-radius:40px;
+
+overflow:hidden;
+
+background:
+linear-gradient(
+rgba(6,14,40,.35),
+rgba(6,14,40,.55)
+),
+
+url("edinburgh-night.jpg");
+
+background-size:cover;
+background-position:center;
+}
+
+
+/* NAVIGATION */
+
+nav{
+
+position:absolute;
+
+top:30px;
+left:50%;
+
+transform:translateX(-50%);
+
+display:flex;
+gap:50px;
+
+z-index:10;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:white;
+font-size:12px;
+letter-spacing:2px;
+font-weight:500;
+
+}
+
+
+/* LEFT CONTENT */
+
+.content{
+
+position:absolute;
+
+left:90px;
+top:140px;
+
+z-index:20;
+
+max-width:340px;
+
+}
+
+.content h1{
+
+font-family:'Caveat',cursive;
+font-size:68px;
+line-height:0.95;
+
+color:white;
+
+margin-bottom:20px;
+
+}
+
+.content p{
+
+color:white;
+font-size:16px;
+line-height:1.8;
+
+opacity:.9;
+
+}
+
+.btn{
+
+display:inline-block;
+
+margin-top:30px;
+
+padding:14px 28px;
+
+background:#ff8db3;
+
+border-radius:50px;
+
+color:white;
+
+text-decoration:none;
+
+font-size:14px;
+
+font-weight:600;
+
+box-shadow:
+0 8px 20px rgba(255,141,179,.4);
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-4px);
+
+}
+
+
+/* CHIBI */
+
+.chibi{
+
+position:absolute;
+
+left:50%;
+top:55%;
+
+transform:
+translate(-50%,-50%);
+
+height:420px;
+
+z-index:15;
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%,100%{
+transform:
+translate(-50%,-50%);
+}
+
+50%{
+transform:
+translate(-50%,-58%);
+}
+
+}
+
+
+/* NOTE */
+
+.note{
+
+position:absolute;
+
+right:130px;
+top:110px;
+
+width:220px;
+
+background:#fff5e8;
+
+padding:25px;
+
+border-radius:10px;
+
+box-shadow:
+0 15px 35px rgba(0,0,0,.15);
+
+transform:rotate(-4deg);
+
+z-index:20;
+
+}
+
+.note h3{
+
+font-size:22px;
+
+line-height:1.5;
+
+color:#444;
+
+font-family:'Caveat';
+
+}
+
+
+/* PIN */
+
+.note::before{
+
+content:"";
+
+position:absolute;
+
+width:18px;
+height:18px;
+
+background:#ff9fbf;
+
+border-radius:50%;
+
+top:-8px;
+left:50%;
+
+transform:translateX(-50%);
+
+}
+
+
+/* STARS */
+
+.star{
+
+position:absolute;
+
+color:white;
+
+font-size:20px;
+
+animation:twinkle 2s infinite;
+
+}
+
+@keyframes twinkle{
+
+0%,100%{
+opacity:.3;
+}
+
+50%{
+opacity:1;
+}
+
+}
+
+.star1{
+top:160px;
+left:45%;
+}
+
+.star2{
+top:280px;
+left:58%;
+}
+
+.star3{
+top:210px;
+left:63%;
+}
+
+
+/* BOTTOM SCALLOP */
+
+.scallop{
+
+position:absolute;
+
+bottom:0;
+
+width:100%;
+height:30px;
+
+background:
+radial-gradient(circle at 15px 0,
+transparent 15px,
+white 16px);
+
+background-size:30px 30px;
+
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<nav>
+<a href="#">HOME</a>
+<a href="#">DREAMS</a>
+<a href="#">MEMORIES</a>
+<a href="#">GALLERY</a>
+<a href="#">FOR YOU</a>
+</nav>
+
+<div class="content">
+
+<h1>
+Once upon<br>
+a deadline...
+</h1>
+
+<p>
+There was a girl<br>
+with too many dreams.
+</p>
+
+<a href="#" class="btn">
+START JOURNEY ✨
+</a>
+
+</div>
+
+<img
+src="chibi-graduation.png"
+class="chibi"
+alt=""
+>
+
+<div class="note">
+
+<h3>
+Graduation<br>
+is not the end,<br>
+it's the beginning<br>
+of everything ♡
+</h3>
+
+</div>
+
+<div class="star star1">✦</div>
+<div class="star star2">✧</div>
+<div class="star star3">✦</div>
+
+<div class="scallop"></div>
+
+</section>
+
+</body>
+</html>
